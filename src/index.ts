@@ -58,6 +58,10 @@ const isBulky = (dimensions: [Centimeter, Centimeter, Centimeter]): boolean =>
  * - **SPECIAL**: Either heavy OR bulky (but not both)
  * - **REJECTED**: Both heavy AND bulky
  *
+ * Because this accepts dimensions as floats values will 'round' to the threshold
+ * for example 19.999999999999999kg === 20kg. In practice the measuring units probably
+ * have a lower precision.
+ *
  * @param width - The width dimension in centimeters (must be \> 0)
  * @param height - The height dimension in centimeters (must be \> 0)
  * @param length - The length dimension in centimeters (must be \> 0)
